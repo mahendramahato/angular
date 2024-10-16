@@ -1,0 +1,4 @@
+Two types of data binding
+
+1. Unidirectional
+2. Bidirectional

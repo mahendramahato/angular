@@ -1,0 +1,24 @@
+
+<h2>Push Ups</h2>
+<img src="pushup.jpeg"
+    class="rounded-circle mx-auto d-block" 
+    height="200" width="auto" alt="pushup-image" 
+/>
+
+<p>String Interpolation code</p>
+<h1>{{flowerName}} displayed through string interpretation</h1>
+
+<p>Property Binding</p>
+<input type="text" [value]="flowerName" />
+
+<p>Event Binding</p>
+<button class="btn btn-primary" (click)="changeName()"
+type="button">Change Flower</button>
+
+<br><br>
+<p>Two way data binding</p>
+<button type="button" class="btn btn-success" (click)="increment()">+</button>
+<input type="number" [(ngModel)]="counter">
+<button type="button" class="btn btn-danger" (click)="decrement()">-</button>
+
+

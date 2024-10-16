@@ -1,0 +1,20 @@
+how to create component
+
+1st way
+1. create folder
+2. we need to create 4 files
+login.component.ts
+login.component.html
+login.component.css
+login.component.spec.ts
+
+3. register login component inside app.module.ts
+4. use selector of the component and use it inside the files where we want it
+
+second way
+go to CLI enter one single command
+- ng generate component login
+or 
+- ng g c login
+
+
