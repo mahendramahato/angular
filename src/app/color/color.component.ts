@@ -15,5 +15,13 @@ export class ColorComponent {
 
   month:string="January"
 
+  showmonth(month:string){
+    console.log(month)
+  }
+
+  removecolor(color:string){
+    this.allColors.splice(this.allColors.indexOf(color),1);
+  }
+
 
 }

@@ -17,4 +17,15 @@ go to CLI enter one single command
 or 
 - ng g c login
 
+5. passing value from parent component ot child components
+
+<!-- 
+1. create variable in parent component
+2. pass this variable to child
+3. goto template of parent and pass the value through property binding
+4. create input variable in child 
+5. display in template of child component
+6.add the selector of parent into app.component.html
+
+-->
 

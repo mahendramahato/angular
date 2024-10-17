@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-color-child',
@@ -10,5 +11,14 @@ import { Component, Input } from '@angular/core';
 export class ColorChildComponent {
 
   @Input() printmonth:string='';
+
+  @Output() showEventEmitter=new EventEmitter();
+
+  showmonth(printmonth:string){
+    this.showEventEmitter.emit();
+  }
+  
+
+  
 
 }
