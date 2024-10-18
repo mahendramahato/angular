@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ColorChildComponent } from "./color-child/color-child.component";
 
@@ -14,6 +14,18 @@ export class ColorComponent {
   allColors:string[]=["Red", "Green", "Blue"]
 
   month:string="January"
+
+  constructor(){
+    console.log("Parent constructor");
+  }
+
+  ngOnchanges(changes:SimpleChanges){
+    console.log("Changes in parent component");
+  }
+
+  ngOnInit() {
+    console.log("Parent component initialized");
+  }
 
   showmonth(month:string){
     console.log(month)

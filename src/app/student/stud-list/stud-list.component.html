@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 [ngStyle]="{'font-size': 30}">Student Details</h2>
+    <table class="table table-striped">
+        <thead class="table-dark text-white">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>TotalMarks</th>
+                <th>Percentage</th>
+                <th>Dob</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let stud of allStud" [ngSwitch]="stud.studGender"> -->
+                <tr appMouseOver *ngFor="let stud of allStud" [ngClass]="{'text-danger':stud.studTotalMarks<250}">
+               <!-- <ng-container *ngIf="stud.studTotalMarks < 250"> -->
+                    <td>{{stud.studId}}</td>
+                    <td>{{stud.studName}}</td>
+                    <td [ngStyle]="{'color': getMarks(stud.studTotalMarks)}">{{stud.studTotalMarks}}</td>
+                    <td></td>
+                    <td>{{stud.studDob}}</td>
+                    <td>{{stud.studGender}}</td>
+                    <!-- <td *ngSwitchCase="'Male'" class="text-primary" >{{stud.studGender}}</td>
+                    <td *ngSwitchCase="'Female'" class="text-danger" >{{stud.studGender}}</td> -->
+            <!--    </ng-container> -->
+            <!-- </tr> -->
+                </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Data } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, FooterComponent],
   templateUrl: './display.component.html',
   styleUrl: './display.component.css'
 })
+
 export class DisplayComponent {
+
+  greet:string = "Hello";
+
+  @Input() printmonth:string='';
 
   flowerName:string = 'Red Rose';
   number1:number = 90;

@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, SimpleChanges } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -13,6 +13,18 @@ export class ColorChildComponent {
   @Input() printmonth:string='';
 
   @Output() showEventEmitter=new EventEmitter();
+
+  constructor(){
+    console.log("child constructor");
+  }
+
+  ngOnchanges(changes:SimpleChanges){
+    console.log("changes happened in child");
+  }
+
+  ngOnInit(){
+    console.log("child initialized");
+  }
 
   showmonth(printmonth:string){
     this.showEventEmitter.emit();

@@ -29,3 +29,11 @@ or
 
 -->
 
+6. passing value from child to parent
+
+1. in child component create a event, this event will get value displayed from parent
+2. it has to emit it to parent i.e. inform parent to show the value
+3. by creating a output variable we will be able to emit it 
+i.e. pass instruction to parent to show the value
+4. parent will receive it from selector of child component present in parent template
+5. it will call showmonth() and will display 
