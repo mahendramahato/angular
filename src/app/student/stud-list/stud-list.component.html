@@ -1,5 +1,14 @@
 <div class="container">
     <h2 [ngStyle]="{'font-size': 30}">Student Details</h2>
+    <div class="form-group">
+        <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="filterValue"
+            placeholder="Enter Gender"
+            
+        >
+    </div>
     <table class="table table-striped">
         <thead class="table-dark text-white">
             <tr>
@@ -13,13 +22,14 @@
         </thead>
         <tbody>
             <!-- <tr *ngFor="let stud of allStud" [ngSwitch]="stud.studGender"> -->
-                <tr appMouseOver *ngFor="let stud of allStud" [ngClass]="{'text-danger':stud.studTotalMarks<250}">
+                <tr appMouseOver *ngFor="let stud of allStud | filterData:filterValue" [ngClass]="{'text-danger':stud.studTotalMarks<250}">
                <!-- <ng-container *ngIf="stud.studTotalMarks < 250"> -->
                     <td>{{stud.studId}}</td>
-                    <td>{{stud.studName}}</td>
-                    <td [ngStyle]="{'color': getMarks(stud.studTotalMarks)}">{{stud.studTotalMarks}}</td>
-                    <td></td>
-                    <td>{{stud.studDob}}</td>
+                    <td>{{stud.studName | uppercase}}</td>
+                    <!-- <td [ngStyle]="{'color': getMarks(stud.studTotalMarks)}">{{stud.studTotalMarks}}</td> -->
+                    <td>{{stud.studTotalMarks | currency : 'INR': 'symbol'}}</td>
+                    <td>{{stud.studTotalMarks/500 | percent}}</td>
+                    <td>{{stud.studDob | date : 'short'}}</td>
                     <td>{{stud.studGender}}</td>
                     <!-- <td *ngSwitchCase="'Male'" class="text-primary" >{{stud.studGender}}</td>
                     <td *ngSwitchCase="'Female'" class="text-danger" >{{stud.studGender}}</td> -->
@@ -28,4 +38,9 @@
                 </tr>
         </tbody>
     </table>
+
+    <button class="btn btn-success" type="button" (click)="AddTestStud()">
+        Add Test Student
+    </button>
+
 </div>

@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { Stud } from './stud.model';
-import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgClass, NgStyle } from '@angular/common';
+import { DatePipe, UpperCasePipe, PercentPipe, CurrencyPipe, NgClass, NgStyle } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { FilterDataPipe } from '../../custom-pipe/filter-data.pipe';
+
 
 @Component({
   selector: 'app-stud-list',
   standalone: true,
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgClass, NgStyle],
+  imports: [DatePipe, UpperCasePipe, PercentPipe, CurrencyPipe, 
+    FormsModule, FilterDataPipe, NgClass, NgStyle],
   templateUrl: './stud-list.component.html',
   styleUrl: './stud-list.component.css'
 })
 export class StudListComponent {
 
+  filterValue: string='';
+  allNumbers:number[]=[3,2,1,4];
   allStud:Stud[] = [
     {
       studId: 100,
@@ -50,6 +56,17 @@ export class StudListComponent {
     }else{
       return 'red';
     }
+  }
+
+  AddTestStud(){
+    let newStud={
+      studId: 104,
+      studName: 'Test Student',
+      studTotalMarks: 190,
+      studDob: new Date(2,9,2010),
+      studGender: 'Male'
+    }
+    this.allStud.push(newStud);
   }
 
 }
