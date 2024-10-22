@@ -1,0 +1,26 @@
+[
+    {
+    "studId": 100,
+    "studName": "Hari",
+    "studTotalMarks": 250,
+    "studGender": "Male"
+    },
+    {
+    "studId": 101,
+    "studName": "jina",
+    "studTotalMarks": 450,
+    "studGender": "Female"
+    },
+    {
+    "studId": 102,
+    "studName": "hira",
+    "studTotalMarks": 400,
+    "studGender": "Female"
+    },
+    {
+    "studId": 103,
+    "studName": "jony",
+    "studTotalMarks": 300,
+    "studGender": "Male"
+    }
+]

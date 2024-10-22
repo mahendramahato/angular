@@ -1,0 +1,14 @@
+Obsevable steps:
+
+1. angular service should be sending request to backend server in asynchronous format
+through http client class in asynchronous format
+
+2. backend server will be having i.e. http class will be having methods like get, post
+put, delete
+
+3. it will in turn request database for data 
+
+4. database will be sending data by wrapping it in observable object
+
+5. when component is subscribing it will get the response
+

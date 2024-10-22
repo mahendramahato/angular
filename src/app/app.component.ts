@@ -9,14 +9,17 @@ import { ColorChildComponent } from "./color/color-child/color-child.component";
 import { StudListComponent } from "./student/stud-list/stud-list.component";
 import { NumberListComponent } from "./number-list/number-list.component";
 import { TodoAnimationsComponent } from "./todo-animations/todo-animations.component";
+import { StudentDetailsComponent } from "./student-details/student-details.component";
+import { StudentMarksComponent } from "./student-marks/student-marks.component";
+import { ObservableDemoComponent } from "./observable-demo/observable-demo.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DisplayComponent, HeaderComponent, 
-    NavigateComponent, FooterComponent, ColorComponent, 
+  imports: [RouterOutlet, DisplayComponent, HeaderComponent,
+    NavigateComponent, FooterComponent, ColorComponent,
     ColorChildComponent, StudListComponent, NumberListComponent,
-    TodoAnimationsComponent],
+    TodoAnimationsComponent, StudentDetailsComponent, StudentMarksComponent, ObservableDemoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
