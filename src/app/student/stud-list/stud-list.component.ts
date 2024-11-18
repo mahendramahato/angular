@@ -63,7 +63,7 @@ export class StudListComponent {
 
   AddTestStud(){
     let newStud={
-      studId: 104,
+      id: 104,
       studName: 'Test Student',
       studTotalMarks: 190,
       studDob: new Date(2,9,2010),

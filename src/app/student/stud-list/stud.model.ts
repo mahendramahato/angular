@@ -1,7 +1,7 @@
 
 export interface Stud
 {
-    studId:number;
+    id:number;
     studName:string;
     studTotalMarks:number;
     studDob:Date;

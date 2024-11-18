@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": "2",
+      "studName": "Shyam",
+      "studTotalMarks": 240,
+      "studDob": "7/7/2014",
+      "studGender": "Male"
+    },
+    {
+      "id": "3",
+      "studName": "Jina",
+      "studTotalMarks": 360,
+      "studDob": "7/7/2014",
+      "studGender": "Female"
+    }
+  ]
+}

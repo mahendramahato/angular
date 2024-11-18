@@ -24,7 +24,7 @@
             <!-- <tr *ngFor="let stud of allStud" [ngSwitch]="stud.studGender"> -->
                 <tr appMouseOver *ngFor="let stud of allStud | filterData:filterValue" [ngClass]="{'text-danger':stud.studTotalMarks<250}">
                <!-- <ng-container *ngIf="stud.studTotalMarks < 250"> -->
-                    <td>{{stud.studId}}</td>
+                    <td>{{stud.id}}</td>
                     <td>{{stud.studName | uppercase}}</td>
                     <!-- <td [ngStyle]="{'color': getMarks(stud.studTotalMarks)}">{{stud.studTotalMarks}}</td> -->
                     <td>{{stud.studTotalMarks | currency : 'INR': 'symbol'}}</td>

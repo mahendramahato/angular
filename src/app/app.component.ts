@@ -12,6 +12,7 @@ import { TodoAnimationsComponent } from "./todo-animations/todo-animations.compo
 import { StudentDetailsComponent } from "./student-details/student-details.component";
 import { StudentMarksComponent } from "./student-marks/student-marks.component";
 import { ObservableDemoComponent } from "./observable-demo/observable-demo.component";
+import { StudentListHttpComponent } from "./studentcomp/student-list-http/student-list-http.component";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { ObservableDemoComponent } from "./observable-demo/observable-demo.compo
   imports: [RouterOutlet, DisplayComponent, HeaderComponent,
     NavigateComponent, FooterComponent, ColorComponent,
     ColorChildComponent, StudListComponent, NumberListComponent,
-    TodoAnimationsComponent, StudentDetailsComponent, StudentMarksComponent, ObservableDemoComponent],
+    TodoAnimationsComponent, StudentDetailsComponent, StudentMarksComponent, ObservableDemoComponent, StudentListHttpComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

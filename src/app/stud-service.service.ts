@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class StudServiceService {
 
-  private url:string='./public/AppData/student.json';
-  
+  private url:string='http://localhost:3000/students';
+
   allstud:any[]=[
     [
       {
